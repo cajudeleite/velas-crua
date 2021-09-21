@@ -4,9 +4,13 @@
   color: var(--bg-color);
   padding: 0 30px 0 30px;
   height: 70px;
+  .nav-link {
+    color: var(--bg-color) !important;
+  }
    h1 {
     color: var(--bg-color);
     margin: 0;
+    font-family: 'Syncopate', sans-serif;
   }
 }
 

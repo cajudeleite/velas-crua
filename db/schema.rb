@@ -10,10 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_14_104607) do
+ActiveRecord::Schema.define(version: 2021_09_14_174231) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "candles", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.integer "stock"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.float "price"
+    t.index ["user_id"], name: "index_candles_on_user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "candle_id", null: false
+    t.integer "price"
+    t.date "date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["candle_id"], name: "index_orders_on_candle_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "candle_id", null: false
+    t.string "description"
+    t.integer "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["candle_id"], name: "index_reviews_on_candle_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,8 +58,14 @@ ActiveRecord::Schema.define(version: 2021_09_14_104607) do
     t.string "name"
     t.boolean "admin", default: false, null: false
     t.string "address"
+    t.boolean "vendor", default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "candles", "users"
+  add_foreign_key "orders", "candles"
+  add_foreign_key "orders", "users"
+  add_foreign_key "reviews", "candles"
+  add_foreign_key "reviews", "users"
 end

@@ -1,0 +1,31 @@
+.login-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .btn {
+    background-color: var(--color);
+    color: var(--bg-color);
+    width: 40%;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    input {
+      width: 100%;
+    }
+  }
+  .container {
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    justify-content: center;
+    text-align: center;
+    font-size: 60px;
+  }
+  a {
+    color: var(--color);
+  }
+}

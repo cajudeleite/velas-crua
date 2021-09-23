@@ -2,20 +2,22 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-sm-7">
-        <h1>Esqueceu sua senha?</h1>
+        <h1>esqueceu sua senha?</h1>
         <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
           <%= f.error_notification %>
           <div class="form-inputs">
-            <div class="py-4"><%= f.input :email,
+            <div class="py-4 pt-1"><%= f.input :email,
                         required: true,
                         autofocus: true,
+                        label: "email",
+                        label_html: { class: 'pb-1' },
                         input_html: { class: 'py-1' } %></div>
           </div>
           <div class="container text-center">
             <%= render "devise/shared/links" %>
             <div class="container d-flex justify-content-center">
               <div class="form-actions btn mt-3">
-                <%= f.button :submit, "Redefinir minha senha" %>
+                <%= f.button :submit, "redefinir minha senha" %>
               </div>
             </div>
           </div>

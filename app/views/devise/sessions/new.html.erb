@@ -2,23 +2,29 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-sm-7">
-        <h1>Log in</h1>
+        <h1>log in</h1>
         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs">
-            <div class="pb-4"><%= f.input :email,
+            <div class="pb-4 pt-1"><%= f.input :email,
                         required: true,
                         autofocus: true,
+                        label: "email",
+                        label_html: { class: 'pb-1' },
                         input_html: { class: 'py-1' } %></div>
             <div class="pb-4"><%= f.input :password,
                         required: true,
+                        label: "senha",
+                        label_html: { class: 'pb-1' },
                         input_html: { class: 'py-1' } %></div>
-            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+            <%= f.input :remember_me,
+                        label: "lembre de mim",
+                        as: :boolean if devise_mapping.rememberable? %>
           </div>
           <div class="container text-center">
             <%= render "devise/shared/links" %>
             <div class="container d-flex justify-content-center">
               <div class="form-actions btn mt-3">
-                <%= f.button :submit, "Log in" %>
+                <%= f.button :submit, "log in" %>
               </div>
             </div>
           </div>

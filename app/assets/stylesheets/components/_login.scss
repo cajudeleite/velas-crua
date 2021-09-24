@@ -3,6 +3,14 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  .upload-photo {
+    border: 1px solid var(--color);
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    background: white;
+    border-radius: 5px;
+  }
   .btn {
     background-color: var(--color);
     color: var(--bg-color);

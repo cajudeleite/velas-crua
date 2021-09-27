@@ -17,6 +17,7 @@ class CandlesController < ApplicationController
 
   def create
     @candle = Candle.new(candle_params)
+    @candle.user = current_user
     authorize @candle
     if @candle.save
       redirect_to candle_path(@candle), notice: "sua vela foi criada com sucesso"

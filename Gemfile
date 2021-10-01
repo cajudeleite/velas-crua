@@ -34,7 +34,7 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
 group :development, :test do  gem 'pry-byebug'
-  gem 'pry-rails'
+  gem 'pry-rails', groups: [:development, :test]
   gem 'dotenv-rails'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

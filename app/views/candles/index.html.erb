@@ -27,7 +27,11 @@ https://images.unsplash.com/photo-1565809655810-3973da946da1?ixid=MnwxMjA3fDB8MH
           <div class="candle-card">
             <div class="wrapper">
               <div class="product-img">
-                <img src="<%=candle_array.sample%>" height="321" width="250">
+                <% if candle.photo.attached? %>
+                  <%= cl_image_tag candle.photo.key, height: 321, width: 250, crop: :fill %>
+                <% else%>
+                  <img src="<%=candle_array.sample%>" height="321" width="250">
+                <%end%>
               </div>
               <div class="product-info">
                 <div class="product-text">

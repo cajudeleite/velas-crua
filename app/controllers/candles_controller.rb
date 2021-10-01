@@ -51,6 +51,6 @@ class CandlesController < ApplicationController
   private
 
   def candle_params
-    params.require(:candle).permit(:name, :stock, :description, :price, :photo)
+    params.require(:candle).permit(:name, :stock, :description, :price, photos: [])
   end
 end

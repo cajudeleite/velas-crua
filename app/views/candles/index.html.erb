@@ -27,8 +27,24 @@ https://images.unsplash.com/photo-1565809655810-3973da946da1?ixid=MnwxMjA3fDB8MH
           <div class="candle-card">
             <div class="wrapper">
               <div class="product-img">
-                <% if candle.photo.attached? %>
-                  <%= cl_image_tag candle.photo.key, height: 321, width: 250, crop: :fill %>
+                <% if candle.photos.attached? %>
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <% n = 0 %>
+                    <% candle.photos.each do |photo| %>
+                      <% if n == 0 %>
+                        <div class="carousel-item active">
+                          <%= cl_image_tag photo.key, height: 321, width: 250, class: 'd-block w-100', style: 'height: 321px; object-fit: cover; object-position: 50% 70%;', crop: :fill %>
+                        </div>
+                      <% else %>
+                        <div class="carousel-item">
+                          <%= cl_image_tag photo.key, height: 321, width: 250, class: 'd-block w-100', style: 'height: 321px; object-fit: cover; object-position: 50% 70%;', crop: :fill %>
+                        </div>
+                      <% end %>
+                      <% n += 1 %>
+                    <% end %>
+                  </div>
+                </div>
                 <% else%>
                   <img src="<%=candle_array.sample%>" height="321" width="250">
                 <%end%>

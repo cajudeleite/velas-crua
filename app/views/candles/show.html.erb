@@ -1,11 +1,40 @@
-<div class="candle-show d-flex align-items-center">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1>Hey</h1>
-      </div>
-      <div class="col">
+<div class="candle-card-big">
+  <div class="wrapper">
+    <div class="product-img">
+      <% if @candle.photos.attached? %>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <% n = 0 %>
+            <% @candle.photos.each do |photo| %>
+              <% if n == 0 %>
+                <div class="carousel-item active">
+                  <%= cl_image_tag photo.key, height: 530, width: 413, class: 'd-block w-100', style: 'height: 530px; object-fit: cover; object-position: 50% %;', crop: :fill %>
+                </div>
+              <% else %>
+                <div class="carousel-item">
+                  <%= cl_image_tag photo.key, height: 530, width: 413, class: 'd-block w-100', style: 'height: 530px; object-fit: cover; object-position: 50% %;', crop: :fill %>
+                </div>
+              <% end %>
+              <% n += 1 %>
+            <% end %>
+          </div>
+        </div>
+      <% else%>
+        <img src="<%=candle_array.sample%>" height="530" width="413">
+      <%end%>
+    </div>
+    <div class="product-info">
+      <div class="product-text">
         <h1><%= @candle.name %></h1>
+        <p><%=@candle.description%> </p>
+      </div>
+      <div class="price-flex">
+        <p><%= @candle.price.to_i %> R$</p>
+        <div class="product-price-btn">
+          <%= link_to root_path do %>
+            <button type="button">comprar</button>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

@@ -1,120 +1,362 @@
 .candle-card {
 
   .wrapper {
-  height: 320px;
-  width: 500px;
-  margin: 50px auto;
-  border-radius: 7px 7px 7px 7px;
-  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-}
+    height: 352px;
+    width: 550px;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  }
 
-.product-img {
-  float: left;
-  height: 320px;
-  width: 250px;
-  object-fit: cover;
+  .product-img {
+    float: left;
+    height: 352px;
+    width: 275px;
+    object-fit: cover;
 
-}
+  }
 
-.product-img img {
-  border-radius: 7px 0 0 7px;
-  object-fit: cover;
-}
+  .product-img img {
+    border-radius: 7px 0 0 7px;
+    object-fit: cover;
+  }
 
-.product-info {
-  float: left;
-  height: 320px;
-  width: 250px;
-  border-radius: 0 10px 10px 0;
-  background-color: $light-gray
-}
+  .product-info {
+    float: left;
+    height: 352px;
+    width: 275px;
+    border-radius: 0 10px 10px 0;
+    background-color: $light-gray
+  }
 
-.product-text {
-  height: 230px;
-  width: 250px;
-}
+  .product-text {
+    height: 253px;
+    width: 275px;
+  }
 
-.product-text h1 {
-  margin: 0 0 0 25px;
-  padding-top: 25px;
-  font-size: 32px;
-  color: $green;
-}
+  .product-text h1 {
+    margin: 0 0 0 25px;
+    padding-top: 20px;
+    font-size: 32px;
+    color: $green;
+  }
 
-.product-price-btn p {
-  font-family: 'Bentham', serif;
-}
+  .product-price-btn p {
+    font-family: 'Montserrat', sans-serif;
+  }
 
-.product-text h2 {
-  margin: 0 0 36px 30px;
-  font-size: 12px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #d2d2d2;
-  letter-spacing: 0.2em;
-}
+  .product-text h2 {
+    margin: 0 0 36px 30px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    letter-spacing: 0.2em;
+  }
 
-.product-text p {
-  height: 75%;
-  margin: -20px 0 0 25px;
-  font-family: 'Playfair Display', serif;
-  color: #8d8d8d;
-  line-height: 1.7em;
-  font-size: 14px;
-  font-weight: lighter;
-  overflow: hidden;
-}
+  .product-text p {
+    height: 80%;
+    margin: -10px 15px 0 25px;
+    font-family: 'Hind Madurai', sans-serif;
+    color: #8d8d8d;
+    line-height: 1.4em;
+    font-size: 13.5px;
+    font-weight: normal;
+    overflow: hidden;
+  }
 
 
-.product-price-btn p {
-  font-family: 'Trocchi', serif;
-  font-size: 18px;
-  font-weight: lighter;
-  color: #474747;
-}
+  .product-price-btn p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #474747;
+  }
 
-span {
-  display: inline-block;
-  height: 38px;
-  font-family: 'Suranna', serif;
-  font-size: 20px;
-}
+  span {
+    display: inline-block;
+    height: 42px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+  }
 
-.price-flex {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 25px;
-  align-items: center;
-  p{
-    margin: 0;
-    font-family: 'Trocchi', serif;
+  .price-flex {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    margin-top: 0;
+    align-items: center;
+    p{
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .product-price-btn button {
+    height: 42px;
+    width: 149px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $light-gray;
+    background-color: $green;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+  }
+
+  .product-price-btn button:hover {
+    background-color: var(--bg-color);
+    color: $green;
+    transition: 0.5s;
   }
 }
 
-.product-price-btn button {
-  height: 38px;
-  width: 135px;
-  box-sizing: border-box;
-  border: transparent;
-  border-radius: 60px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: $light-gray;
-  background-color: $green;
-  cursor: pointer;
-  outline: none;
-  transition: 0.5s;
+.candle-card-mobile {
+
+  .wrapper {
+    height: 500px;
+    width: 320px;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .product-img {
+    float: left;
+    height: 250px;
+    width: 320px;
+    object-fit: cover;
+
+  }
+
+  .product-img img {
+    border-radius: 7px 7px 0 0;
+    object-fit: cover;
+  }
+
+  .product-info {
+    float: left;
+    height: 250px;
+    width: 320px;
+    border-radius: 0 0 10px 10px;
+    background-color: $light-gray
+  }
+
+  .product-text {
+    height: 250px;
+    width: 230px;
+  }
+
+  .product-text h1 {
+    margin: 0 0 0 25px;
+    padding-top: 20px;
+    font-size: 32px;
+    color: $green;
+  }
+
+  .product-price-btn p {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .product-text h2 {
+    margin: 0 0 36px 30px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    letter-spacing: 0.2em;
+  }
+
+  .product-text p {
+    height: 60%;
+    width: 100%;
+    margin: -15px 5px 0 25px;
+    font-family: 'Hind Madurai', sans-serif;
+    color: #8d8d8d;
+    line-height: 1.4em;
+    font-size: 12px;
+    font-weight: lighter;
+    overflow: hidden;
+  }
+
+
+  .product-price-btn p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #474747;
+  }
+
+  span {
+    display: inline-block;
+    height: 38px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+  }
+
+  .price-flex {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+    margin-top: 0;
+    align-items: center;
+    p{
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .product-price-btn button {
+    height: 42px;
+    width: 149px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $light-gray;
+    background-color: $green;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+  }
+
+  .product-price-btn button:hover {
+    background-color: var(--bg-color);
+    color: $green;
+    transition: 0.5s;
+  }
 }
 
-.product-price-btn button:hover {
-  background-color: var(--bg-color);
-  color: $green;
-  transition: 0.5s;
-}
+.candle-card-big {
+  .wrapper {
+    height: 529px;
+    width: 827px;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+
+  }
+
+  .product-img {
+    float: left;
+    height: 529px;
+    width: 413px;
+    object-fit: cover;
+
+    img {
+      border-radius: 7px 0 0 7px;
+      object-fit: cover;
+    }
+  }
+
+  .product-info {
+    float: left;
+    height: 529px;
+    width: 413px;
+    border-radius: 0 7px 7px 0;
+    background-color: $light-gray
+  }
+
+  .product-text {
+    height: 434px;
+    width: 413px;
+  }
+
+  .product-text h1 {
+    margin: 0 0 15px 30px;
+    padding-top: 25px;
+    font-size: 32px;
+    color: $green;
+  }
+
+  .product-price-btn p {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .product-text h2 {
+    margin: 0 0 36px 30px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    letter-spacing: 0.2em;
+  }
+
+  .product-text p {
+    height: 206px;
+    margin: 0px 0 0 25px;
+    font-family: 'Hind Madurai', sans-serif;
+    color: #8d8d8d;
+    line-height: 1.7em;
+    font-size: 14px;
+    font-weight: lighter;
+    overflow: hidden;
+  }
+
+
+  .product-price-btn p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #474747;
+  }
+
+  span {
+    display: inline-block;
+    height: 63px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+  }
+
+  .price-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    p{
+      margin: 0px;
+      font-family: 'Montserrat', sans-serif;
+    }
+  }
+
+  .product-price-btn button {
+    height: 63px;
+    width: 222px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: $light-gray;
+    background-color: $green;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .product-price-btn button:hover {
+    background-color: $orange;
+    color: $green;
+    transition: 0.5s;
+  }
 }

@@ -1,4 +1,5 @@
 .candle-card {
+  justify-content: center;
 
   .wrapper {
     height: 352px;
@@ -20,6 +21,10 @@
 
   .product-img img {
     border-radius: 7px 0 0 7px;
+    height: 353px;
+    width: 275px;
+    object-fit: cover;
+    object-position: 50% 70%;
     object-fit: cover;
   }
 
@@ -68,7 +73,6 @@
     overflow: hidden;
   }
 
-
   .product-price-btn p {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
@@ -85,8 +89,8 @@
 
   .price-flex {
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 30px;
+    justify-content: space-between;
+    padding: 30px 15px 0 25px;
     margin-top: 0;
     align-items: center;
     p{
@@ -118,128 +122,56 @@
     color: $green;
     transition: 0.5s;
   }
-}
 
-.candle-card-mobile {
+  @media (max-width: 750px) {
 
-  .wrapper {
-    height: 500px;
-    width: 320px;
-    margin: 50px auto;
-    border-radius: 7px 7px 7px 7px;
-    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  }
-
-  .product-img {
-    float: left;
-    height: 250px;
-    width: 320px;
-    object-fit: cover;
-
-  }
-
-  .product-img img {
-    border-radius: 7px 7px 0 0;
-    object-fit: cover;
-  }
-
-  .product-info {
-    float: left;
-    height: 250px;
-    width: 320px;
-    border-radius: 0 0 10px 10px;
-    background-color: $light-gray
-  }
-
-  .product-text {
-    height: 250px;
-    width: 230px;
-  }
-
-  .product-text h1 {
-    margin: 0 0 0 25px;
-    padding-top: 20px;
-    font-size: 32px;
-    color: $green;
-  }
-
-  .product-price-btn p {
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  .product-text h2 {
-    margin: 0 0 36px 30px;
-    font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #d2d2d2;
-    letter-spacing: 0.2em;
-  }
-
-  .product-text p {
-    height: 60%;
-    width: 100%;
-    margin: -15px 5px 0 25px;
-    font-family: 'Hind Madurai', sans-serif;
-    color: #8d8d8d;
-    line-height: 1.4em;
-    font-size: 12px;
-    font-weight: lighter;
-    overflow: hidden;
-  }
-
-
-  .product-price-btn p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: lighter;
-    color: #474747;
-  }
-
-  span {
-    display: inline-block;
-    height: 38px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-  }
-
-  .price-flex {
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 30px;
-    margin-top: 0;
-    align-items: center;
-    p{
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
+    .wrapper {
+      height: 500px;
+      width: 320px;
     }
-  }
 
-  .product-price-btn button {
-    height: 42px;
-    width: 149px;
-    box-sizing: border-box;
-    border: transparent;
-    border-radius: 60px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: $light-gray;
-    background-color: $green;
-    cursor: pointer;
-    outline: none;
-    transition: 0.5s;
-  }
+    .product-img {
+      height: 250px;
+      width: 320px;
+    }
 
-  .product-price-btn button:hover {
-    background-color: var(--bg-color);
-    color: $green;
-    transition: 0.5s;
+    .product-img img {
+      border-radius: 7px 7px 0 0;
+      height: 250px;
+      width: 320px;
+    }
+
+    .product-info {
+      height: 250px;
+      width: 320px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .product-text {
+      height: 195px;
+      width: 270px;
+
+      h1 {
+        padding-top: 15px;
+      }
+    }
+
+    .product-text p {
+      height: 60%;
+      width: 100%;
+      margin: -15px 5px 0 25px;
+      font-size: 12px;
+      font-weight: lighter;
+    }
+
+    span {
+      height: 38px;
+    }
+
+    .price-flex {
+      padding: 0;
+      padding: 0 25px;
+    }
   }
 }
 
@@ -302,8 +234,8 @@
   }
 
   .product-text p {
-    height: 206px;
-    margin: 0px 0 0 25px;
+    height: fit-content;
+    margin: 0px 15px 0 25px;
     font-family: 'Hind Madurai', sans-serif;
     color: #8d8d8d;
     line-height: 1.7em;
@@ -329,11 +261,13 @@
 
   .price-flex {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 15px 0 25px;
     align-items: center;
     p{
       margin: 0px;
       font-family: 'Montserrat', sans-serif;
+      font-size: 25px;
     }
   }
 

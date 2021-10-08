@@ -1,6 +1,6 @@
 <div class="login-signup d-flex align-items-center" style="height: calc(100vh - 70px);">
   <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" style='margin-top: 240px; margin-bottom: 50px;'>
       <div class="col-sm-7">
         <h1>criar nova vela</h1>
         <%= simple_form_for @candle do |f| %>
@@ -11,10 +11,17 @@
                         label: "nome",
                         label_html: { class: 'pb-1' },
                         input_html: { class: 'py-1' } %></div>
-            <div class="pb-4"><%= f.input :description,
+            <div class="pb-4"><%= f.input :short_description,
                         required: true,
                         autofocus: true,
-                        label: "descrição",
+                        label: "pequena descrição",
+                        label_html: { class: 'pb-1' },
+                        hint: "360 caracteres no máximo",
+                        input_html: { class: 'py-1', maxlength: '360' } %></div>
+            <div class="pb-4"><%= f.input :large_description,
+                        required: true,
+                        autofocus: true,
+                        label: "grande descrição",
                         label_html: { class: 'pb-1' },
                         input_html: { class: 'py-1' } %></div>
             <div class="pb-4"><%=f.input :price,
@@ -22,6 +29,13 @@
                             autofocus: true,
                             min: '1',
                             label: "preço",
+                            label_html: { class: 'pb-1' },
+                            input_html: { class: 'py-1' } %></div>
+            <div class="pb-4"><%=f.input :size,
+                            required: true,
+                            autofocus: true,
+                            min: '1',
+                            label: "tamanhos",
                             label_html: { class: 'pb-1' },
                             input_html: { class: 'py-1' } %></div>
             <div class="pb-4"><%=f.input :stock,
